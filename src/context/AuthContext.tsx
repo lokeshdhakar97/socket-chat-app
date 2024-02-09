@@ -3,7 +3,6 @@ import { auth } from "@/firebase/firebase";
 import { AuthContextType, ProviderProps } from "@/types/type";
 import { onAuthStateChanged } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { signInWithGoogle, signOut } from "@/lib/authFunction";
 
 export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
   const [user, setUser] = useState<any>();
@@ -37,8 +36,6 @@ export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
     loading,
     user,
     setLoading,
-    signOut,
-    signInWithGoogle,
   };
 
   return (

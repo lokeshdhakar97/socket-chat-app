@@ -5,10 +5,8 @@ export interface ProviderProps {
 }
 
 export interface AuthContextType {
-  signOut: () => Promise<any>;
   loading: boolean;
   user: any;
-  signInWithGoogle: () => Promise<any>;
   setLoading: any;
 }
 
