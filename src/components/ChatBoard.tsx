@@ -8,14 +8,10 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import {
-  BellIcon,
-  ChatBubbleIcon,
-  EyeNoneIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
-import { Separator } from "@radix-ui/react-dropdown-menu";
+import { ChatBubbleIcon } from "@radix-ui/react-icons";
 import { Textarea } from "./ui/textarea";
+import { Input } from "./ui/input";
+import { DialogBox } from "./DialogBox";
 
 const ChatBoard = () => {
   return (
@@ -25,11 +21,15 @@ const ChatBoard = () => {
           <CardHeader className="pb-3">
             <CardTitle>Chats</CardTitle>
             <CardDescription>Start Chatting, Start Connecting.</CardDescription>
+            <DialogBox />
           </CardHeader>
           <CardContent className="grid gap-1">
-            {[1, 2, 3, 4, 5, 6].map(() => {
+            {[1, 2, 3, 4, 5, 6].map((key) => {
               return (
-                <div className="-mx-2 my-4 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground cursor-pointer px-4">
+                <div
+                  key={key}
+                  className="-mx-2 my-4 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground cursor-pointer px-4"
+                >
                   <ChatBubbleIcon className="mt-px h-5 w-5" />
                   <div className="space-y-1">
                     <p className="text-sm font-medium leading-none">

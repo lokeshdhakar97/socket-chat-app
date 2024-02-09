@@ -22,7 +22,7 @@ export default function LoginAndSignup() {
   if (user) router.replace("/");
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col gap-6">
+    <section className="w-screen h-screen flex justify-center items-center flex-col gap-6">
       <Image alt="logo" src="/logo.png" width={200} height={70} />
       <Tabs defaultValue="login" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
@@ -66,6 +66,6 @@ export default function LoginAndSignup() {
           </Card>
         </TabsContent>
       </Tabs>
-    </div>
+    </section>
   );
 }
